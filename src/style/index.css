@@ -1,5 +1,8 @@
+/* GENERAL */
 body{
     background-color: #000;
+    width: 100%;
+    height: 100%;
 }
 * {
     margin: 0;
@@ -7,4 +10,20 @@ body{
     font-size: 100%;
     font-family: sans-serif;
     color: #f9f9f9;
+}
+a{ color: #f9f9f9; }
+a:hover{ text-decoration: none; color: rgb(165, 165, 165); transition: .2s; }
+
+/* HEADER EDITS */
+.header{
+    background-image: url('../../assets/bg_lufilms.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+.img-content-edit{
+    width: 180px;
+    cursor: pointer;
 }

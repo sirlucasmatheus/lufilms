@@ -1,0 +1,30 @@
+{
+    "Movies": {
+        "movieInfo":[
+            {
+                "url": "./assets/movies/1917_movie.jpg",
+                "name": "1917",
+                "description": "Na Primeira Guerra Mundial, dois soldados britânicos recebem ordens aparentemente impossíveis de cumprir. Em uma corrida contra o tempo, eles precisam atravessar o território inimigo e entregar uma mensagem que pode salvar 1600 de seus companheiros.",
+                "creationDate": "18 de janeiro de 2020 (Brasil)"
+            },
+            {
+                "url": "./assets/movies/bad_boys_movie.jpg",
+                "name": "Bad Boys para Sempre",
+                "description": "Os policiais Mike Lowery e Marcus Burnett se juntam para derrubar o líder de um cartel de drogas em Miami. A recém-criada equipe de elite do departamento de polícia de Miami, ao lado de Mike e Marcus, enfrenta o implacável Armando Armas.",
+                "creationDate": "30 de janeiro de 2020 (Brasil)"
+            },
+            {
+                "url": "./assets/movies/maria_e_joao_movie.jpg",
+                "name": "Maria e João: O Conto das Bruxas",
+                "description": "Desta vez, as migalhas nos guiam por um caminho muito mais sombrio e perturbador. Durante um período de escassez, Maria e seu irmão mais novo, João, saem de casa e partem para a floresta em busca de comida e sobrevivência.",
+                "creationDate": "20 de fevereiro de 2020 (Brasil)"
+            },
+            {
+                "url": "./assets/movies/sonic_movie.jpg",
+                "name": "Sonic: O Filme",
+                "description": "Sonic, o porco-espinho azul mais famoso do mundo, se junta com os seus amigos para derrotar o terrível Doutor Eggman, um cientista louco que planeja dominar o mundo, e o Doutor Robotnik, responsável por aprisionar animais inocentes em robôs.",
+                "creationDate": "13 de fevereiro de 2020 (Brasil)"
+            }
+        ]
+    }
+}

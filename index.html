@@ -6,20 +6,24 @@
     <title>Filmes e Séries - LuFilms</title>
 
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./src/style/index.css">
-
 </head>
 <body>
-    <div id="container">
-        <div class="header">
-            <div>
-                <img src="./assets/lufilms_logo.png">
-            </div>
-            <div>
-                <h3>Assista filmes e séries HD, tudo grátis.</h3>
+    <div class="container-fluid">
+        <div>
+            <div class="header">
+                <div align='center'>
+                    <img class="" src="./assets/lufilms_logo.png">
+                </div>
+                <div>
+                    <h3>Assista filmes e séries HD, tudo grátis.</h3>
+                </div>
             </div>
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
@@ -27,37 +31,54 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Destaques</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Gênero
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Ação</a>
-                        <a class="dropdown-item" href="#">Animação</a>
-                        <a class="dropdown-item" href="#">Comédia</a>
-                        <a class="dropdown-item" href="#">Drama</a>
-                        <a class="dropdown-item" href="#">Terror</a>
-                        <a class="dropdown-item" href="#">Suspense</a>
-                        </div>
-                    </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Destaques</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Gênero
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Ação</a>
+                            <a class="dropdown-item" href="#">Animação</a>
+                            <a class="dropdown-item" href="#">Comédia</a>
+                            <a class="dropdown-item" href="#">Drama</a>
+                            <a class="dropdown-item" href="#">Terror</a>
+                            <a class="dropdown-item" href="#">Suspense</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
             </nav>           
         </div>
-        <div>
-            <table>
-                <tr></tr>
-            </table>
+        <div class="row content-body">
+            <div class="">
+                <ul class="row mt-4 mx-3" id="movie-content">
+                    
+                </ul>
+            </div>
         </div>
     </div>
-</body>
+
+    <script>
+        var movieContent = $('#movie-content')
+        $.getJSON('./src/config/movies.json', (data) => {
+            data.Movies['movieInfo'].forEach(res => {
+                var nameUrl = res.url.split('./assets/movies/')[1]
+                movieContent.append(`
+                    <div class='row ml-5 my-5'>
+                        <a href=./scr/screens/${nameUrl.split('.jpg')[0]}.html><img class='img-content-edit' src=${res.url}></a>
+                        <h2 class='align-self-center ml-3'><a href=./scr/screens/${nameUrl.split('.jpg')[0]}.html>${res.name}</a></h2>
+                        <span class='description-text'>${res.description}</span>
+                    </div>
+                `);
+            });
+        })
+    </script>
 </html>
