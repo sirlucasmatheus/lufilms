@@ -32,3 +32,12 @@ a:hover{ text-decoration: none; color: rgb(165, 165, 165); transition: .2s; }
 .description-text{
     width: 600px;
 }
+
+.movie-name-text{
+    font-size: 3vh;
+}
+
+.footer{
+    background-color: #1f1c14;
+    padding: 10px;
+}
