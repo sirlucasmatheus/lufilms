@@ -19,10 +19,10 @@
         <div>
             <div class="header">
                 <div align='center'>
-                    <img class="" src="./assets/lufilms_logo.png">
+                    <img class="mt-4" src="./assets/lufilms_logo.png">
                 </div>
-                <div>
-                    <h3>Assista filmes e séries HD, tudo grátis.</h3>
+                <div class="row ml-5 justify-cotent-center">
+                    <strong><h3 style="font-size: 5vh; text-shadow: 0 10px 14px #000;">Assista filmes e séries HD, tudo grátis.</h3></strong>
                 </div>
             </div>
             <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
@@ -59,7 +59,7 @@
         </div>
         <div class="row content-body">
             <div class="">
-                <ul class="row mt-4 mx-3" id="movie-content">
+                <ul class="mt-4 mx-3" id="movie-content">
                     
                 </ul>
             </div>
@@ -75,7 +75,6 @@
                     <div class='row ml-5 my-5'>
                         <a href=./scr/screens/${nameUrl.split('.jpg')[0]}.html><img class='img-content-edit' src=${res.url}></a>
                         <h2 class='align-self-center ml-3'><a href=./scr/screens/${nameUrl.split('.jpg')[0]}.html>${res.name}</a></h2>
-                        <span class='description-text'>${res.description}</span>
                     </div>
                 `);
             });
